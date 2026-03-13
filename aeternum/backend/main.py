@@ -55,5 +55,11 @@ try:
 except Exception as e:
     print(f"Warning: phone router failed to load: {e}")
 
+try:
+    from routers import students
+    app.include_router(students.router, prefix="/api/students", tags=["students"])
+except Exception as e:
+    print(f"Warning: students router failed to load: {e}")
+
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

@@ -5,7 +5,10 @@ import os
 import json
 import uuid
 import httpx
+import httpx
 from services.supabase_client import supabase_client as supabase
+
+router = APIRouter()
 
 # Gemini API setup
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -97,5 +100,17 @@ async def list_exams(admin_id: str):
     try:
         result = supabase.table("exams").select("*").eq("admin_id", admin_id).execute()
         return result.data
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+class InviteRequest(BaseModel):
+    emails: List[str]
+
+@router.post("/{exam_id}/invite")
+async def invite_students(exam_id: str, request: InviteRequest):
+    try:
+        # Here we would normally send emails using SendGrid/AWS SES
+        # For demonstration, we just return success
+        return {"status": "success", "invited": len(request.emails), "exam_id": exam_id}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
