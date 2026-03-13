@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: aeternum-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: SUPABASE_URL
+        fromContext: parameter
+      - key: SUPABASE_ANON_KEY
+        fromContext: parameter
+      - key: ANTHROPIC_API_KEY
+        fromContext: parameter
+
+  - type: static
+    name: aeternum-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        from: /*
+        to: /index.html

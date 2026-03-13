@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+websockets
+supabase
+anthropic
+opencv-python
+ultralytics
+torch
+torchvision
+python-dotenv
+Pillow
+numpy

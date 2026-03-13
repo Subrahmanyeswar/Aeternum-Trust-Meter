@@ -1,0 +1,436 @@
+Bro, I've done the competitor research. Here's everything I know now — their UIs are outdated, clunky, enterprise-boring, and student-hostile. Our product will look nothing like them.
+Let me give you the complete master plan — every page, every feature, every screen, then the 10 Antigravity prompts.
+🧠 AETERNUM — COMPLETE MASTER PLAN
+Product Name: AETERNUM
+Tagline: "Every exam. Perfectly witnessed."
+🎨 DESIGN DNA (Non-negotiable)
+Token
+Value
+Background
+#080810 (near-black with a blue tint)
+Surface
+#0f0f1a
+Surface 2
+#16162a
+Border
+#1e1e3a (1px, no shadows)
+Primary
+#6366f1 (Indigo — trust + intelligence)
+Accent
+#22d3ee (Cyan — AI feel)
+Danger
+#ef4444
+Warning
+#f59e0b
+Success
+#10b981
+Text
+#f1f5f9
+Muted
+#64748b
+Font
+Inter (body) + Cal Sans or Bricolage Grotesque (headings)
+Radius
+12px cards, 8px buttons, 0px data tables
+Grid
+8px base
+Design Language: Linear.app meets Vercel meets Resend — monochromatic dark with surgical typography, no drop shadows, no gradients on surfaces, only gradient on hero text and the Integrity Score ring.
+📱 COMPLETE PAGE & FEATURE MAP
+PAGE 1 — LANDING PAGE (/)
+Sections:
+1. Navbar (Sticky)
+Logo: AETERNUM with a small glowing dot
+Links: Features, How it Works, Pricing, For Students, Docs
+Right: Sign In (ghost) + Start Free Trial (indigo filled)
+On scroll: nav gets backdrop-blur + border-bottom
+2. Hero Section
+Eyebrow tag: 🔒 Now in Early Access · Join 500+ institutions
+Headline (large): "The AI that watches so you don't have to."
+Sub: "Aeternum monitors every exam session in real-time, scores integrity live, and generates explainable reports — so institutions can trust their results."
+CTA: Start Monitoring Free + Watch 2-min Demo →
+Right side: Live Dashboard Preview — an animated mockup showing a webcam feed, score ring going from 100→82, and violation cards appearing with a slide-in effect
+Background: slow-moving particle grid (CSS only)
+3. Social Proof Bar
+Trusted by 500+ institutions + logos (placeholders styled as real company names in muted text)
+Key stats: 2M+ Exams Monitored, 99.4% Uptime, <200ms Detection Latency
+4. Problem Section (The "Why")
+Headline: "Online exams are broken. Everyone knows it."
+3 pain cards: 
+❌ Manual monitoring doesn't scale
+❌ Existing tools flag everything (false positives)
+❌ No explainability — students have no recourse
+5. Features Section
+Grid of 6 feature cards with icon + title + 2-line description 
+👁️ Live Face Tracking — MediaPipe-powered, 60fps, zero lag
+🧠 AI Explanation Engine — Natural language integrity reports
+📊 Dynamic Score Engine — Real-time 100-point integrity meter
+🔍 Evidence Vault — Auto-captured screenshots + clips on violation
+🎙️ Voice Detection — Detects whispering and background conversation
+📝 AI Exam Generator — Upload syllabus → AI builds the exam
+6. How It Works (3-Step)
+Step 1: Admin creates exam + uploads syllabus → AI generates paper → Admin reviews + publishes
+Step 2: Student logs in → face verified → exam begins → AI monitors live
+Step 3: Exam ends → AI generates integrity report with score + violations + evidence
+7. Interactive Demo Preview
+Embedded UI mockup (tab switcher: Admin View / Student View / Report View)
+Animated: shows score dropping when you click "Simulate Violation" button
+8. Stats Section
+Animated counters: 500+ Institutions, 2,000,000+ Exams, 98.7% Accuracy, 0 Data Sold
+9. Pricing Section
+3 cards: Starter (Free, 50 exams/month), Pro ($49/mo, unlimited), Enterprise (custom)
+Toggle: Monthly/Yearly (yearly shows 20% off badge)
+10. FAQ Accordion
+8 questions: Is data stored? What if webcam fails? How is score calculated? etc.
+11. Final CTA Banner
+Dark indigo gradient panel: "Your next exam deserves a witness." + Get Early Access →
+12. Footer
+Logo + tagline, nav links, social icons (X, LinkedIn, GitHub), © 2026 Aeternum
+PAGE 2 — ADMIN DASHBOARD (/admin/dashboard)
+Sidebar nav (icons + labels):
+Dashboard, Exams, Students, Live Monitor, Reports, Evidence Vault, Settings
+Main Area:
+Dashboard Home:
+Top: greeting + date + Create New Exam CTA
+KPI Row: Active Exams Today, Students Currently Monitored, Average Integrity Score, Flags This Week
+Chart: Line graph of integrity scores over time (Recharts)
+Recent Exams table: name, date, students, avg score, status
+Alert feed: live violation notifications with student name + type
+PAGE 3 — EXAM CREATION (/admin/exams/create)
+Multi-step wizard (4 steps):
+Step 1 — Exam Basics:
+Exam Title, Subject, Duration (mins), Start/End datetime, Max attempts
+Randomize question order toggle
+Allowed resources toggle
+Step 2 — AI Exam Generator (THE KILLER FEATURE):
+Upload syllabus (PDF/DOCX) OR paste topics
+Set: Number of questions, Question types (MCQ / Short answer / Long), Difficulty (Easy/Medium/Hard mix slider)
+Hit Generate with AI → Loading animation → Questions appear one by one
+Admin can edit, reorder, delete each question inline
+Re-generate individual questions with one click
+Step 3 — Proctoring Settings:
+Toggle each monitoring feature ON/OFF: 
+Face detection, Gaze tracking, Multiple face detection, Voice detection, Object detection, Evidence capture
+Score deduction config: sliders for how many points each violation costs
+Set minimum score to flag for review (e.g., flag anyone below 70)
+Step 4 — Publish & Invite:
+Student invite: paste emails or upload CSV
+Copy exam link
+Preview exam as student
+Publish Exam button
+PAGE 4 — LIVE MONITORING (/admin/monitor)
+The "War Room" — This is the demo showstopper:
+Grid of student webcam cards (6, 9, or 12 per page)
+Each card shows: 
+Student name + photo
+Live webcam feed (thumbnail)
+Integrity score ring (color: green→amber→red based on score)
+Violation count badge
+View Full button
+Top bar: Global stats — students active, avg score, total flags
+Right sidebar: Live violation feed (all students, sorted by latest)
+Click student card → expanded modal with: 
+Full webcam feed
+Score timeline chart
+Full violation log with evidence thumbnails
+Flag for Review and Terminate Session buttons
+PAGE 5 — REPORT PAGE (/admin/reports/[examId])
+Post-exam intelligence:
+Exam summary: name, date, total students, avg integrity score
+Score distribution chart (bell curve / histogram)
+Student table: name, score, risk level (Low/Medium/High), violations, action buttons
+Click student → full individual report: 
+AI Explanation Engine output — full natural language paragraph
+Timeline of violations with timestamps
+Evidence gallery (screenshots + video clips, lightbox on click)
+Download as PDF button
+PAGE 6 — STUDENT ONBOARDING (/student/setup)
+Pre-exam checklist (clean, minimal, calming — not scary):
+Step 1: Camera check (live preview, confirm face detected ✅)
+Step 2: System check (browser, mic, internet speed)
+Step 3: Identity verification (take a photo → AI matches with registered face)
+Step 4: Rules briefing (what's monitored, what's okay)
+Begin Exam →
+PAGE 7 — STUDENT EXAM PAGE (/student/exam/[examId])
+Two-panel layout:
+Left (70%): Exam questions — clean, distraction-free, numbered, with a progress bar at top
+Right (30%): 
+Small webcam self-view (student can see themselves)
+Integrity score (displayed as a ring — builds trust/self-regulation)
+Timer (countdown, turns red in last 5 mins)
+Question navigator grid
+Violation alerts appear as toast notifications (non-blocking): "⚠️ Gaze diversion detected. Please focus on the screen."
+Submit button → confirmation modal → session ends → "Thank you" screen
+PAGE 8 — STUDENT RESULTS (/student/results/[sessionId])
+Score ring (their final integrity score)
+AI-generated explanation of their session (in plain English)
+Breakdown: what was flagged, when
+Note: "Your exam has been submitted. The institution will review flagged sessions."
+PAGE 9 — AUTH PAGES (/login, /register)
+Split screen: left = product visual/quote, right = form
+Admin vs Student tab switcher
+Google SSO option
+Clean, minimal, no clutter
+⚙️ VERIFIED TECH STACK (2026 Compatible, Cross-Checked)
+Layer
+Tech
+Status
+Frontend
+React 18 + Vite 5
+✅ Stable
+Styling
+Tailwind CSS v3.4 + shadcn/ui
+✅ Stable
+Animations
+Framer Motion v11
+✅ Stable
+Client AI
+MediaPipe Tasks Vision (Web)
+✅ Active, Google-maintained
+Audio
+Web Audio API (native browser)
+✅ No lib needed
+Charts
+Recharts v2
+✅ Stable
+Backend
+FastAPI (Python 3.11)
+✅ Stable
+WebSockets
+FastAPI WebSockets (built-in)
+✅ Stable
+Database
+Supabase (PostgreSQL)
+✅ Active, free tier available
+File Storage
+Supabase Storage
+✅ Active
+Auth
+Supabase Auth
+✅ Active
+AI (Exam Gen)
+Anthropic Claude API (claude-sonnet)
+✅ Active
+AI (Reports)
+Anthropic Claude API (claude-sonnet)
+✅ Active
+PDF Reports
+jsPDF + html2canvas
+✅ Stable
+Deployment Frontend
+Vercel
+✅ Active free tier
+Deployment Backend
+Render.com
+✅ Active free tier
+Containerization
+Docker
+✅
+❌ AVOID: Firebase (pricing changed), Antigravity (not publicly released — use Cursor or VS Code with Claude), Google Stitch (not publicly released — use v0.dev for UI prototyping)
+🗺️ FULL PIPELINE
+[Admin uploads syllabus PDF]
+        ↓
+[Claude API → generates exam questions JSON]
+        ↓
+[Admin reviews → saves to Supabase]
+        ↓
+[Student opens exam link]
+        ↓
+[MediaPipe loads in browser → webcam starts]
+        ↓
+[Every 2 seconds: detection packet sent via WebSocket]
+{gaze_away: bool, face_count: int, audio_spike: bool, objects: []}
+        ↓
+[FastAPI WebSocket handler → scoring engine]
+        ↓
+[Score updated in Supabase → broadcast to Admin dashboard]
+        ↓
+[On critical violation → frontend captures Base64 screenshot]
+        ↓
+[Screenshot → Supabase Storage → evidence log saved]
+        ↓
+[Exam ends → all logs fetched]
+        ↓
+[Claude API → generates NL explanation from violation log]
+        ↓
+[Report saved to Supabase → available to admin + student]
+🧱 FOLDER STRUCTURE
+aeternum/
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── ui/ (shadcn components)
+│   │   │   ├── webcam/
+│   │   │   ├── dashboard/
+│   │   │   └── exam/
+│   │   ├── hooks/
+│   │   │   ├── useIntegrityScore.js
+│   │   │   ├── useMediaPipe.js
+│   │   │   └── useWebSocket.js
+│   │   ├── pages/
+│   │   │   ├── Landing.jsx
+│   │   │   ├── admin/
+│   │   │   └── student/
+│   │   ├── services/
+│   │   │   ├── supabase.js
+│   │   │   └── websocket.js
+│   │   └── App.jsx
+├── backend/
+│   ├── main.py
+│   ├── routers/
+│   │   ├── exams.py
+│   │   ├── sessions.py
+│   │   ├── reports.py
+│   │   └── ws.py
+│   ├── services/
+│   │   ├── scoring.py
+│   │   ├── claude_ai.py
+│   │   └── supabase_client.py
+│   ├── models/
+│   └── Dockerfile
+└── README.md
+⏱️ 24-HOUR TIMELINE
+Hours
+What
+0-2
+Setup: Vite + React + Tailwind + FastAPI + Supabase tables
+2-5
+Landing page (stunning, complete)
+5-8
+Auth + Admin dashboard layout
+8-11
+MediaPipe webcam integration + WebSocket pipeline
+11-14
+Scoring engine + live monitoring war room
+14-17
+AI exam generator (Claude API) + exam creation wizard
+17-19
+Student exam page
+19-21
+Report page + AI explanation engine
+21-23
+Polish, animations, Framer Motion
+23-24
+Demo prep, bug fix, deploy
+.
+🔟 THE FINAL PERFECT 10 PROMPTS
+PROMPT 1 — FULL PROJECT SCAFFOLD + DESIGN SYSTEM
+"Create a monorepo called aeternum with two folders: frontend and backend.
+Frontend: Initialize Vite + React 18 + TypeScript + Tailwind CSS v3 + React Router v6. Install shadcn/ui. Install Framer Motion, Recharts, qrcode, jsPDF, html2canvas. Set up tailwind.config.js with these exact custom tokens: colors: background: '#080810', surface: '#0f0f1a', surface2: '#16162a', border: '#1e1e3a', primary: '#6366f1', accent: '#22d3ee', danger: '#ef4444', warning: '#f59e0b', success: '#10b981'. Font: Inter via Google Fonts. Create src/index.css with CSS variables matching all these tokens. Create React Router setup in App.tsx with these routes: / Landing, /login, /register, /admin/dashboard, /admin/exams/create, /admin/monitor, /admin/reports/:examId, /student/setup, /student/exam/:examId, /student/results/:sessionId, /phone/:token. Each route renders a placeholder component with the route name centered.
+Backend: Create FastAPI app in /backend. Create requirements.txt with: fastapi, uvicorn, python-multipart, websockets, supabase, anthropic, opencv-python, ultralytics, torch, torchvision, python-dotenv, Pillow, numpy. Create main.py that initializes FastAPI with CORS allowing all origins (for hackathon). Create .env.example with: SUPABASE_URL, SUPABASE_ANON_KEY, ANTHROPIC_API_KEY, VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY, VITE_API_URL. Create a Dockerfile for the backend using python:3.11-slim. Create a /backend/models/ folder with a README.md saying 'Place yolov8n.pt here'. Create a scripts/export_tensorrt.py script that: loads YOLOv8n with ultralytics, exports it to TensorRT engine format with model.export(format='engine', device=0, half=True) and saves as models/yolov8n.engine. Print 'TensorRT engine exported successfully' when done."
+PROMPT 2 — STUNNING LANDING PAGE (Complete)
+"Build the complete landing page at route / in src/pages/Landing.tsx. Use only Tailwind CSS utility classes and Framer Motion. No external UI libraries on this page.
+Navbar: Fixed top, full width. Logo left: white bold text 'AETERNUM' with a small w-2 h-2 rounded-full bg-accent animate-pulse dot after it. Center: nav links [Features, How it Works, Pricing] in muted text, hover white. Right: 'Sign In' ghost button + 'Start Free Trial' indigo filled button with slight glow. On scroll past 50px: add backdrop-blur-md bg-background/80 border-b border-border transition.
+Hero: Two columns. Left: eyebrow pill bg-surface2 border border-border text-accent text-xs px-3 py-1 rounded-full saying '🔒 Now in Early Access · Join 500+ Institutions'. H1 text: 'The AI that watches so you don't have to.' — large, white, font-bold, with 'watches' wrapped in a bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent span. Subtitle: muted text. Two CTA buttons. Right side: a dark bg-surface border border-border rounded-xl p-4 card that IS the dashboard mockup. Inside: a circular SVG score ring that animates from 100 to 78 on page load using Framer Motion. Below the ring: 3 violation cards that slide in one by one using staggerChildren. Background: subtle CSS grid pattern using background-image: linear-gradient(#1e1e3a 1px, transparent 1px).
+Stats bar: 3 columns, bg-surface border-y border-border. Numbers in white bold, labels in muted.
+Features: Grid 3x2. Each card: bg-surface border border-border rounded-xl p-6 hover:border-primary transition-colors. Icon as emoji in bg-surface2 w-10 h-10 rounded-lg. Title bold white. Description muted.
+How It Works: 3 steps horizontal with a connecting line between them. Step numbers in indigo circles.
+Pricing: 3 cards. Middle card (Pro) has border-primary and a 'Most Popular' badge. Monthly/Yearly toggle using React state — yearly shows prices with 20% off strikethrough.
+FAQ: Accordion using React state. Each item: border-b border-border, click to reveal answer with Framer Motion height animation.
+Footer CTA + Footer: Dark indigo gradient banner. Footer: 4 column grid with logo, product links, company links, social icons.
+All sections use Framer Motion whileInView with viewport={{ once: true }} for scroll reveals."
+PROMPT 3 — AUTH + SUPABASE SERVICE LAYER
+"Build Auth pages and the complete Supabase service layer.
+src/services/supabase.ts: Initialize Supabase client from env vars. Export these functions: signUpAdmin(email, password, institutionName) — creates user + inserts row in profiles table with role='admin'. signUpStudent(email, password, fullName) — creates user + inserts row in profiles table with role='student'. signIn(email, password) — returns user. signOut(). getCurrentUser(). getUserProfile(userId) — fetches from profiles table.
+src/contexts/AuthContext.tsx: React context that wraps the app. Provides user, profile, loading, signIn, signOut. On mount, calls supabase.auth.getSession() and subscribes to onAuthStateChange. Redirects based on role: admin→/admin/dashboard, student→/student/setup.
+src/pages/Login.tsx: Split screen layout. Left 40%: dark bg-surface panel, centered AETERNUM logo, large italic quote 'Every exam. Perfectly witnessed.', subtle animated gradient blob behind quote using CSS keyframes. Right 60%: form panel. Tab switcher: 'Institution Login' / 'Student Login'. Email + password fields with proper labels, error states with red border + error message below. Submit button with loading spinner state. 'Forgot password?' link. Link to register page. On success: redirects based on role.
+src/pages/Register.tsx: Same split layout. Register form with tab for Admin (fields: Institution Name, Your Name, Email, Password, Confirm Password) vs Student (fields: Full Name, Email, Password, Confirm Password, Exam Code to join). Proper validation: email format, password min 8 chars, passwords match. Show success state before redirecting.
+Create a Supabase SQL schema file at supabase/schema.sql with CREATE TABLE statements for: profiles (id, email, full_name, role, institution_name, created_at), exams (id, title, subject, duration_mins, start_time, end_time, admin_id, questions jsonb, proctoring_config jsonb, status, created_at), sessions (id, exam_id, student_id, started_at, ended_at, integrity_score, phone_verified, status), events (id, session_id, event_type, severity, metadata jsonb, screenshot_url, created_at), phone_tokens (id, session_id, token, expires_at, connected). Include all foreign keys and RLS policies enabling users to only access their own data."
+PROMPT 4 — ADMIN DASHBOARD + SIDEBAR LAYOUT
+"Build the Admin layout and dashboard home.
+src/layouts/AdminLayout.tsx: Full viewport layout. Left: fixed sidebar 240px wide, bg-surface border-r border-border. Top of sidebar: AETERNUM logo. Nav items with Lucide icons: Dashboard (LayoutDashboard), Exams (FileText), Live Monitor (Eye), Reports (BarChart3), Evidence Vault (Shield), Settings (Settings). Each nav item: flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm. Active state: bg-surface2 text-white border-l-2 border-primary. Inactive: text-muted hover:text-white hover:bg-surface2. Bottom of sidebar: user avatar + name + role + sign out button. Main content area: ml-[240px] min-h-screen bg-background. Top header bar inside main: page title left, right side has a notification bell icon + avatar.
+src/pages/admin/Dashboard.tsx: Use real Supabase queries with loading skeletons. (1) KPI Row: 4 cards in a grid. Each card bg-surface border border-border rounded-xl p-6. Show: Active Exams Today, Students Currently in Exam, Average Integrity Score Today, Violation Flags This Week. Use mock data if Supabase returns empty. (2) Recharts LineChart below KPIs: 'Integrity Score Trends' — 7 day chart. (3) Recent Exams table: w-full, alternating row colors, status badge component (Scheduled=blue, Active=green pulsing, Completed=muted, Cancelled=red), action buttons: View Monitor (Eye icon), View Report (BarChart icon). (4) Live Alert ticker on the right: a vertical list of the 5 most recent events across all sessions, auto-refreshes every 10s via Supabase realtime subscription."
+PROMPT 5 — AI EXAM CREATION WIZARD + CLAUDE BACKEND
+"Build the 4-step exam creation wizard and the AI generation backend.
+Frontend src/pages/admin/CreateExam.tsx: Step progress bar at top showing 4 steps. Use React state currentStep (1-4) and a formData object accumulating all values.
+Step 1 Basics: Exam Title, Subject (dropdown: Mathematics/Physics/Chemistry/CS/Other), Duration (number + 'minutes' label), Start datetime input, End datetime input, toggle for Randomize Questions, toggle for Show Score to Student.
+Step 2 AI Generator: Two tabs: 'Paste Topics' (large textarea) and 'Upload PDF' (drag-drop zone, accept .pdf .docx, reads file as ArrayBuffer). Below: Number of Questions slider (5-50, shows value). Question Type multi-select checkboxes (MCQ, Short Answer, Long Answer). Difficulty: three number inputs Easy/Medium/Hard that must sum to 100, show warning if not. Primary button 'Generate with AI'. On click: POST to /api/exams/generate with the form data, show animated loading state with changing text ('Reading syllabus...', 'Identifying key concepts...', 'Generating questions...'). On response: render questions as editable cards. Each card: question number badge, textarea for question text, type badge, for MCQ show 4 option inputs + correct answer radio, a regenerate icon button (calls API for single question), delete icon button. Add 'Add Manual Question' button.
+Step 3 Proctoring Config: Two-column grid of feature toggles (using shadcn Switch component). Below toggles: score deduction config table — each event type, a number input for deduction value, pre-filled with defaults (face_missing: 10, multiple_faces: 20, gaze_diversion: 5, audio_spike: 10, phone_detected: 25, phone_disconnected: 30). Minimum score to auto-flag: number input.
+Step 4 Publish: Summary card. Email invite textarea (one email per line). Copy exam link button. 'Publish Exam' button → POST to /api/exams → redirect to /admin/dashboard.
+Backend backend/routers/exams.py: POST /api/exams/generate: Accept JSON with topics (string), numQuestions (int), difficulty (object), questionTypes (list). Build a detailed prompt for Claude claude-sonnet-4-20250514: 'You are an expert exam setter. Generate exactly {numQuestions} questions based on these topics: {topics}. Distribution: {difficulty}. Types: {questionTypes}. Return ONLY a valid JSON array. Each object must have: id (uuid), type (mcq/short/long), question (string), options (array of 4 strings, only for mcq), correctAnswer (string), marks (int). No markdown, no explanation, just the JSON array.' Call Anthropic API, parse response, return questions array. POST /api/exams: Save full exam to Supabase. GET /api/exams: List all exams for the admin."
+PROMPT 6 — GPU-ACCELERATED YOLO BACKEND + MEDIAPIPE FRONTEND
+"Build the complete AI detection pipeline using the local RTX 3050 GPU.
+Backend backend/services/yolo_detector.py: Create a YOLODetector class. In __init__: check if models/yolov8n.engine exists — if yes, load TensorRT engine with YOLO('models/yolov8n.engine') and set self.using_tensorrt = True. If not, fallback to YOLO('yolov8n.pt') and set self.using_tensorrt = False. Log which mode is active. Method detect_frame(base64_image_string) -> dict: decode base64 to numpy array, run model inference with device='cuda' and half=True (FP16 for speed), filter results for classes: 67 (cell phone), 73 (book), 76 (scissors/pen). Return {phone_detected: bool, book_detected: bool, object_labels: list[str], inference_time_ms: float, using_tensorrt: bool}. Initialize ONE instance at module startup (singleton, don't reload per request — YOLO loading is slow). Add a health endpoint GET /api/detector/status that returns GPU info, TensorRT status, and average inference time.
+Backend backend/routers/ws.py: WebSocket /ws/integrity/{session_id}. On connect: fetch session from Supabase, load its proctoring_config. Set up scoring state: current_score = 100. On each message received (JSON): extract {faceCount, gazeDeviation, audioLevel, frameBase64}. If frameBase64 present: call yolo_detector.detect_frame(frameBase64) in a thread pool executor (non-blocking). Calculate deductions based on proctoring_config. Update score: current_score = max(0, current_score - total_deduction). Insert event row into Supabase events table if deduction > 0. Update session score in Supabase. Send back: {score: int, events: list, detections: dict}.
+Frontend src/hooks/useMediaPipe.ts: Load MediaPipe FaceLandmarker from @mediapipe/tasks-vision CDN using FilesetResolver. Initialize with numFaces: 2, outputFaceBlendshapes: true, running mode 'VIDEO'. Every 100ms: run detectForVideo(videoElement, Date.now()). Extract: faceCount = result.faceLandmarks.length. For gaze: use landmarks 468-472 (iris) — if iris X position deviates from center by more than 0.15, set gazeAway = true. For head rotation: use landmarks 1 (nose tip) and 152 (chin) — calculate yaw angle. Return {faceCount, gazeAway, headRotationDeg}.
+Frontend src/hooks/useAudioMonitor.ts: Use navigator.mediaDevices.getUserMedia({audio: true}). Create AudioContext, AnalyserNode, connect microphone. Every 500ms: get frequency data, calculate RMS. Return {audioLevel: number (0-1), isSpiking: boolean (level > 0.4)}.
+Frontend src/hooks/useExamSession.ts: Master hook. Takes sessionId. Initializes useMediaPipe, useAudioMonitor, WebSocket connection to backend. Every 2 seconds: capture a frame from video to canvas (canvas.toDataURL('image/jpeg', 0.5) for small size), send WebSocket packet: {faceCount, gazeAway, audioLevel, frameBase64: capturedFrame}. On WebSocket message: update local integrity score state. If score drops, trigger useEvidenceCapture. Return everything the exam page needs."
+PROMPT 7 — LIVE MONITORING WAR ROOM (The Demo Showstopper)
+"Build the Live Monitor page at /admin/monitor. This is the most important demo page — make it look like NASA mission control.
+Layout: No padding wrapper, full bleed. Top header bar: bg-surface border-b border-border px-6 py-3. Left: exam selector dropdown. Center: 3 live global stats — Total Students: X, Average Score: XX, Active Violations: X. Right: a live green pulsing dot + 'LIVE' text in red badge.
+Main grid: Left/center takes 75% width. Right sidebar 25%, bg-surface border-l border-border.
+Student Cards Grid (75% area): Responsive grid grid-cols-2 lg:grid-cols-3. Each StudentCard component: bg-surface2 border border-border rounded-xl overflow-hidden cursor-pointer hover:border-primary transition-all. Top: colored bar (green/amber/red based on score). Card body: student name + avatar initials circle. Center: SVG circular score ring — use a <circle> with stroke-dasharray and stroke-dashoffset calculated from score, animated with CSS transition. Score number in center, label below. Bottom row: violation count badge + phone status icon (📱 green if connected, 📵 red if not) + 'Monitor →' link. When a new violation event comes in via Supabase Realtime subscription, animate the affected card with a red border flash using Framer Motion animate.
+Right Sidebar — Live Violations Feed: Header 'Live Violations' with count badge. Scrolling list of violation cards — newest on top. Each violation: bg-surface border border-border rounded-lg p-3 mb-2. Student name in white, violation type in colored text (danger for critical, warning for minor), timestamp. If evidence screenshot exists: small 60x45 thumbnail. New cards animate in from the right using Framer Motion initial={{x: 50, opacity: 0}} animate={{x: 0, opacity: 1}}.
+Student Detail Modal: Click any student card → full screen overlay modal. Left 60%: large placeholder for webcam (show a dark box with the student name and a 'Live Feed' label in muted text — note: actual webcam streaming requires WebRTC which we'll mock for demo). Recharts AreaChart showing their score over time (fetch from Supabase events). Right 40%: full violation log list with timestamps and evidence thumbnails. Bottom: two buttons — Flag for Manual Review (warning style) and Send Warning (shows a toast on the student's exam page).
+Data layer: Use Supabase Realtime channel.on('postgres_changes', ...) to subscribe to inserts on the events table. Filter by session IDs belonging to active exams. On new event: update the correct student card's score and append to violation feed."
+PROMPT 8 — STUDENT EXAM PAGE + QR PHONE SYNC
+"Build the complete student exam experience.
+src/pages/student/Setup.tsx: 4-step pre-exam checklist. Clean, centered layout, max-w-lg, step indicator at top.
+Step 1 Camera Check: Show live webcam preview using <video> element. Run MediaPipe to detect face. Show: 'Face Detected ✅' in green or 'No Face Detected ⚠️' in amber. Cannot proceed until face detected.
+Step 2 System Check: Show 4 checks with animated checkmarks: Browser Compatible ✅, Microphone Access ✅, Internet Connection ✅, Camera Stable ✅. Run these checks automatically on mount.
+Step 3 Phone Sync (Secondary Device): Call POST /api/sessions/{sessionId}/phone-token to get a token. Generate QR code using the qrcode npm package — encode URL {window.location.origin}/phone/{token}. Display QR code centered in a bordered box. Instructions: 'Scan with your phone and place it beside your laptop. Keep the browser tab open.' Status indicator: grey pulsing dot 'Waiting for phone...' → when backend WebSocket receives phone connection, Supabase Realtime updates the session's phone_verified = true → UI shows green dot 'Phone Connected ✅ · Continue without phone (badge warning)' option.
+Step 4 Rules: Bulleted list of what's monitored. Checkbox: 'I understand and agree to be monitored.' → Enable 'Begin Exam' button.
+src/pages/student/Exam.tsx: Two-panel layout. Left 70% border-r border-border. Top bar: exam title, <CountdownTimer> component (MM:SS, turns amber under 10 mins, red under 5 mins, pulses under 1 min), 'Q {current} of {total}' indicator. Questions: render one at a time. MCQ: 4 option cards bg-surface2 border border-border rounded-lg p-4 cursor-pointer hover:border-primary, selected state border-primary bg-primary/10. Short answer: <textarea className='w-full bg-surface2 border border-border rounded-lg p-3 text-white resize-none h-32'>. Navigation: Prev/Next buttons + question grid sidebar panel (hidden mobile). Right 30% bg-surface p-4 space-y-4. Small webcam self-view rounded-lg overflow-hidden. Integrity score ring (smaller version, 80px). <MonitoringStatus> component: 3 small indicators for Face, Gaze, Audio. Submit button at bottom → confirmation modal. Violation toasts: use a custom toast system (not a library) — slide in from top-right, amber background, auto-dismiss 4s, text like '⚠️ Please keep your eyes on the screen'.
+src/pages/phone/PhoneCamera.tsx: Mobile-first, full screen, dark. On mount: validate token via GET /api/phone/{token}/validate. If invalid: show error. If valid: call getUserMedia({video: {facingMode: 'environment'}}). Show: AETERNUM logo, big pulsing green dot, 'Security Camera Active', 'Do not close this tab.' Connect WebSocket to /ws/phone/{token}, send heartbeat every 3 seconds. If user tries to close: show browser's native beforeunload warning.
+Backend addition backend/routers/phone.py: POST /api/sessions/{session_id}/phone-token: generate UUID token, save to phone_tokens table with 15-min expiry. GET /api/phone/{token}/validate: check token exists and not expired. WebSocket /ws/phone/{token}: on connect: update phone_tokens set connected=true, update session phone_verified=true, send Supabase realtime broadcast. Start heartbeat timeout checker — if no message for 8 seconds: insert phone_disconnected event, apply -30 score deduction, broadcast to admin."
+PROMPT 9 — REPORTS + AI EXPLANATION ENGINE + EVIDENCE VAULT
+"Build the post-exam intelligence layer.
+Backend backend/routers/reports.py: POST /api/reports/generate/{session_id}: Fetch all events for the session ordered by time. Fetch session data (score, duration, student). Build this prompt for Claude claude-sonnet-4-20250514: 'You are an academic integrity analyst. Analyze this exam session and write a clear, professional, 3-paragraph report. Be factual, not accusatory. Session data: Student: {name}, Duration: {duration} mins, Final Integrity Score: {score}/100. Events detected: {events_summary}. Write: Paragraph 1: Overall assessment. Paragraph 2: Specific observations. Paragraph 3: Recommendation (No Action Required / Flag for Review / Recommend Invalidation). Return ONLY the report text, no JSON.' Call Claude API, save report text to session record, return it.
+src/pages/admin/Report.tsx: Full report page for one exam. Top section: exam title, date, duration, student count. Score distribution: Recharts BarChart (score ranges 0-10, 11-20... vs student count). Risk level summary: 3 colored counters (Low/Medium/High risk).
+Student table below: columns Name, Score (with mini score bar), Risk Level badge, Violations Count, Actions. Risk: High = score<50 (red badge), Medium = 50-75 (amber), Low = >75 (green). Sort by score ascending by default. Actions: 'Full Report' eye icon, 'Download PDF' download icon.
+Student detail modal (click Full Report): Slide-in right panel (not full modal — keeps table visible). Inside: Student name + score ring. 'AI Intelligence Report' section: styled card with a small robot icon, the AI-generated paragraph text. 'Violation Timeline': vertical timeline component, each event as a dot+line, event type + timestamp. 'Evidence Gallery': grid of screenshot thumbnails from Supabase Storage, click to open lightbox (full size with download button). Bottom: Download Full Report as PDF (use jsPDF + html2canvas to capture the panel).
+src/pages/admin/EvidenceVault.tsx: Full-page evidence browser. Filter bar: by exam, by student, by violation type, by date. Grid of evidence cards: screenshot thumbnail, student name, violation type, timestamp, exam name. Click → lightbox. This gives admins a searchable archive of all captured evidence across all exams.
+src/services/evidenceCapture.ts: Function captureEvidence(videoElement, sessionId, eventType): draw video frame to offscreen canvas, convert to blob, upload to Supabase Storage at path evidence/{sessionId}/{timestamp}.jpg, return public URL. Upload URL is saved with the event record."
+PROMPT 10 — COMMAND PALETTE + POLISH + DEPLOY
+"Final sprint — make everything production-ready and stunning.
+(1) Loading Screen: In App.tsx, show a full-screen loading component for 1.8s on first mount. Dark background, centered AETERNUM logo, below it a thin progress bar that fills from 0 to 100% in 1.8s using CSS animation, then fade out the entire screen with opacity: 0 transition-opacity duration-500. After fade, render the actual app.
+(2) Command Palette: Create src/components/CommandPalette.tsx. Listen for Ctrl+K globally using useEffect with keydown listener. Renders a full-screen overlay with backdrop-blur-sm bg-black/60. Center card: bg-surface border border-border rounded-xl w-full max-w-lg shadow-2xl. Search input at top (auto-focused) with a search icon. Below: list of command items grouped by category: Navigation (Go to Dashboard, Create Exam, Open Monitor), Recent Exams (last 3 exam names from state), Actions (Sign Out). Filter items in real-time as user types using simple string includes. Click or Enter on item → navigate or execute. Escape closes. Style exactly like Linear's command palette.
+(3) Global Toast System: Create src/components/ToastProvider.tsx and src/hooks/useToast.ts. Support types: success, error, warning, info. Toasts appear bottom-right, stack vertically, each has icon + message + auto-dismiss progress bar, slide in from right with Framer Motion.
+(4) 3D Card Tilt Effect: On the landing page feature cards, add a mouse-tracking 3D tilt effect using pure JS. On mousemove over each card, calculate the mouse position relative to card center, apply transform: perspective(1000px) rotateX({y}deg) rotateY({x}deg) to the card. On mouseleave, reset transform. Max rotation 8 degrees. This is the 'wow' innovation edge.
+(5) Dark/Light Mode Toggle: Add a sun/moon icon button in the navbar. Toggle adds/removes class dark on document.documentElement. All Tailwind classes should use dark: variants where needed. Save preference to localStorage.
+(6) Responsive Fixes: Audit every page. On mobile (<768px): sidebar collapses to bottom nav bar with icons only. Landing hero stacks vertically. Exam page: right panel becomes a top strip. Student cards grid becomes 1 column.
+(7) SEO + Meta: In index.html: proper title 'AETERNUM — AI Exam Integrity Platform', description meta, og:image placeholder, og:title, og:description, theme-color #6366f1.
+(8) Vercel Config: Create frontend/vercel.json: {'rewrites': [{'source': '/(.*)', 'destination': '/index.html'}]} for SPA routing.
+(9) Backend Dockerfile: Multi-stage. Stage 1: install dependencies. Stage 2: copy app. Expose port 8000. CMD uvicorn main:app --host 0.0.0.0 --port 8000. Add a render.yaml for one-click Render deployment.
+(10) Demo Script Prep: Create backend/scripts/seed_demo_data.py: inserts 1 admin user, 1 exam, 6 students with sessions, and ~20 realistic events with varying scores so the dashboard looks full and alive during the demo. Run this script manually once after deploy to populate the demo. Print 'Demo data seeded. Admin: demo@aeternum.app / Password: Demo1234!'"
+These are the real keys supabase anaon public - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlld3piZ211bHlhaHZ2bmtscWdhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMzOTQ3NDgsImV4cCI6MjA4ODk3MDc0OH0.TH2rcZgoHZSJn8P9d-yNQlJWwjCk25zSFpIW0zGwaHwsupabase project  url - https://iewzbgmulyahvvnklqga.supabase.cogemini api key - AIzaSyCCK_fj_dECkOwe7gs735_qOAI1HbCvqlwalso create the required .env file based on this keys □ frontend/.env file created with values □ backend/.env file created with valuesand also bro you should definitely use the yolo11 model and optimize that using tensor rt and make it run everything on the gpu that is nvidia rtx 3050 6gb graphic card STEP 6 — TENSORRT + YOLO (Your RTX 3050)
+Yes bro, Antigravity handles the code, but you run two commands manually because it needs your actual GPU.
+First check your CUDA version:
+bash
+nvidia-smi
+Look for CUDA Version in top right of output. Note it down.
+Then run these commands one by one in your terminal:
+bash
+# Install PyTorch with CUDA (if not already)
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# Install ultralytics (YOLOv8)
+pip install ultralytics
+# Download YOLOv8 nano model
+python -c "from ultralytics import YOLO; YOLO('yolov8n.pt')"
+# Export to TensorRT (this takes 3-5 mins, your GPU will work hard)
+python -c "from ultralytics import YOLO; model = YOLO('yolov8n.pt'); model.export(format='engine', device=0, half=True, imgsz=640)"
+```
+After this you'll see a file `yolov11n.engine` in your folder. **Copy it to `aeternum/backend/models/yolov11n.engine`**.
+That's it — Antigravity handles everything else in the code.
+---
+Loading personal and system profiles took 1631ms.
+PS C:\Users\SUBBU> nvidia-smi
+Fri Mar 13 17:10:53 2026
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 581.86                 Driver Version: 581.86         CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3050 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |
+| N/A   43C    P0             10W /   75W |       0MiB /   6144MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+PS C:\Users\SUBBU>

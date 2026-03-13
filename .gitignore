@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Frontend
+dist/
+.vite/
+
+# Backend
+models/*.engine
+models/*.pt
+models/*.onnx
+
+# Environment
+.env
+
+# Build
+build/
+bin/
+obj/
+
+# Logs
+logs/
+*.log
+
+# Workspace
+.vscode/
+.idea/
+.gemini/
+brain/
