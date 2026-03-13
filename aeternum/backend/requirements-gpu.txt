@@ -1,0 +1,4 @@
+ultralytics==8.2.2
+torch==2.3.0
+torchvision==0.18.0
+tensorrt==10.0.1

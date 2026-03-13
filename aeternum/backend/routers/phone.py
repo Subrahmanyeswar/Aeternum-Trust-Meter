@@ -3,18 +3,7 @@ from typing import Dict
 import uuid
 import asyncio
 from datetime import datetime, timedelta
-from supabase import create_client, Client
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-router = APIRouter()
-
-# Supabase setup
-url: str = os.environ.get("SUPABASE_URL", "")
-key: str = os.environ.get("SUPABASE_ANON_KEY", "")
-supabase: Client = create_client(url, key)
+from services.supabase_client import supabase_client as supabase
 
 # In-memory storage for active heartbeats (session_id -> last_seen)
 active_heartbeats: Dict[str, datetime] = {}

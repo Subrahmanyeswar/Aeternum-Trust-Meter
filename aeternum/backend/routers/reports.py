@@ -1,15 +1,14 @@
-from fastapi import APIRouter, HTTPException, Depends
-from supabase import create_client, Client
+from services.supabase_client import supabase_client as supabase
 import anthropic
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
-
-router = APIRouter(prefix="/api/reports", tags=["reports"])
-
-supabase: Client = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_ANON_KEY"))
-client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+# Initialize Anthropic safely
+client = None
+try:
+    api_key = os.getenv("ANTHROPIC_API_KEY")
+    if api_key and "placeholder" not in api_key:
+        client = anthropic.Anthropic(api_key=api_key)
+except Exception as e:
+    print(f"Warning: Anthropic client failed to initialize: {e}")
 
 @router.post("/generate/{session_id}")
 async def generate_report(session_id: str):
@@ -51,6 +50,9 @@ Paragraph 3: Recommendation (No Action Required / Flag for Review / Recommend In
 Return ONLY the report text, no JSON. Do not include any preamble or signature."""
 
         # 4. Call Claude
+        if not client:
+            return {"report": "AI Reporting service currently unavailable. Using degraded mode summary: " + events_summary}
+
         message = client.messages.create(
             model="claude-3-5-sonnet-20241022",
             max_tokens=1000,

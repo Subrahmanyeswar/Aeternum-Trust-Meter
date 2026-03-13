@@ -1,0 +1,12 @@
+#!/bin/bash
+cd "$(dirname "$0")"
+echo "[1/3] Activating virtual environment..."
+if [ ! -d ".venv" ]; then
+    echo "[.venv not found, creating...]"
+    python3 -m venv .venv
+fi
+source .venv/bin/activate
+echo "[2/3] Installing/Updating dependencies..."
+pip install -r requirements.txt
+echo "[3/3] Starting Aeternum API on port 8000..."
+uvicorn main:app --reload --host 0.0.0.0 --port 8000

@@ -5,18 +5,7 @@ import asyncio
 import time
 from concurrent.futures import ThreadPoolExecutor
 from services.yolo_detector import detector
-from supabase import create_client, Client
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-router = APIRouter()
-
-# Supabase setup
-supabase_url = os.getenv("SUPABASE_URL")
-supabase_key = os.getenv("SUPABASE_ANON_KEY")
-supabase: Client = create_client(supabase_url, supabase_key)
+from services.supabase_client import supabase_client as supabase
 
 # Thread pool for non-blocking YOLO interference
 executor = ThreadPoolExecutor(max_workers=3)

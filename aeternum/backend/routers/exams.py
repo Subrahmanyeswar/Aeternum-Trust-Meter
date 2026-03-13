@@ -5,17 +5,7 @@ import os
 import json
 import uuid
 import httpx
-from supabase import create_client, Client
-from dotenv import load_dotenv
-
-load_dotenv()
-
-router = APIRouter(prefix="/api/exams", tags=["exams"])
-
-# Supabase setup
-supabase_url = os.getenv("SUPABASE_URL")
-supabase_key = os.getenv("SUPABASE_ANON_KEY")
-supabase: Client = create_client(supabase_url, supabase_key)
+from services.supabase_client import supabase_client as supabase
 
 # Gemini API setup
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
